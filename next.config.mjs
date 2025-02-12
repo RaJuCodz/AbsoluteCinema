@@ -5,7 +5,6 @@ const nextConfig = {
     domains: ["i.pinimg.com", "image.tmdb.org"],
   },
 };
-const withVideos = require("next-videos");
 
-module.exports = withVideos();
+// module.exports = withVideos();
 export default nextConfig;

@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { MovieProvider } from "@/context/MovieContext";
 import ErrorBoundary from "@/components/ErrorBoundary";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,7 +21,10 @@ export default function RootLayout({ children }) {
         <MovieProvider>
           <ErrorBoundary>
             <Navbar />
-            <main className="pt-16">{children}</main>
+            <main className="pt-16">
+              {children}
+              <Analytics />
+            </main>
           </ErrorBoundary>
         </MovieProvider>
       </body>
